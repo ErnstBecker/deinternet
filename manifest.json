@@ -5,14 +5,20 @@
 	"author": "Ernst Becker",
 	"description": "Stop the internet from being frustrating.",
 	"homepage_url": "https://github.com/ernstbecker/deinternet",
-	"icons": {
-		"48": "icons/deinternet-48.png"
-	},
-
+	"icons": { "48": "icons/deinternet-48.png" },
 	"content_scripts": [
 		{
 			"matches": ["https://www.youtube.com/*"],
 			"js": ["main.js"]
 		}
-	]
+	],
+	"permissions": [],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "@deinternet",
+			"data_collection_permissions": {
+				"required": ["none"]
+			}
+		}
+	}
 }
