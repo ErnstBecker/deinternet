@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "DeInternet",
+	"version": "0.0.1",
+	"author": "Ernst Becker",
+	"description": "Stop the internet from being frustrating.",
+	"homepage_url": "https://github.com/ernstbecker/deinternet",
+	"icons": {
+		"48": "icons/deinternet-48.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["https://www.youtube.com/*"],
+			"js": ["main.js"]
+		}
+	]
+}
